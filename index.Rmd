@@ -1,0 +1,33 @@
+---
+title: "R Markdown and Leaflet"
+author: "Saparov Timurlan"
+date: "4/8/2024"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Assignment:
+
+```{r}
+library(leaflet)
+```
+
+```{r}
+m_map <- leaflet() %>% addTiles()   
+m_map <- m_map %>% addMarkers(lat= 40.4395932, lng= -79.9893378, popup="Piitsburgh Penguins play here")
+m_map  
+```
+
+
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
